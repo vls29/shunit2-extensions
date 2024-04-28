@@ -60,7 +60,7 @@ function test_assertNotNull_fails_correctly() {
     assertEquals 1 ${lastCommandStatus}
 }
 
-function deliberately_failing_test() {
+function test_deliberately_failing_breaks_the_build() {
     assertFalse "true"
 }
 
