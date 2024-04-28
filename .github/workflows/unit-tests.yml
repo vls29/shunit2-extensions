@@ -20,4 +20,4 @@ jobs:
         run: docker build -t shunit2-extensions .
 
       - name: Run tests
-        run: docker run $(pwd):/mnt shunit2-extensions
+        run: docker run -v $(pwd):/mnt shunit2-extensions
