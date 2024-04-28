@@ -60,4 +60,8 @@ function test_assertNotNull_fails_correctly() {
     assertEquals 1 ${lastCommandStatus}
 }
 
+function deliberately_failing_test() {
+    assertFalse "true"
+}
+
 . shunit2
