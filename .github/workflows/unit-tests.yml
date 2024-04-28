@@ -1,0 +1,23 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t shunit2-extensions .
+
+      - name: Run tests
+        run: docker run -v $(pwd):/mnt shunit2-extensions
