@@ -60,8 +60,4 @@ function test_assertNotNull_fails_correctly() {
     assertEquals 1 ${lastCommandStatus}
 }
 
-function test_deliberately_failing_breaks_the_build() {
-    assertFalse "true"
-}
-
 . shunit2
